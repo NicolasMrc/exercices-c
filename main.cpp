@@ -1,13 +1,15 @@
 #include <iostream>
 #include "Point.h"
+#include "Etudiant.h"
 
 //TEACHING.GAALOUL@GMAIL.COM
 //[C++-EFREI]SANSVOISIN_MERCIER
 
 void exercice1(int taille);
 void exercice2(int taille);
-void exercice3();
+void exercice3(int nbEtudiants);
 int somme(int tab[], int taille);
+float calculerMoyenneClasse(Etudiant etudiants[], int nbEtudiants);
 
 /**
  * methode principale appelant les methode de chaques exercices
@@ -17,7 +19,7 @@ int somme(int tab[], int taille);
 int main() {
     exercice1(10);
     exercice2(4);
-    exercice3();
+    exercice3(10);
     return 0;
 }
 
@@ -60,15 +62,53 @@ int somme(int tab[], int taille){
 void exercice2(int taille){
     std::cout << "################\n" <<"#  Exercice 2  #\n" << "################\n\n";
 
-    Point *tab = new Point[taille];
+    Point *points = new Point[taille];
 
-    delete []tab;
+    delete []points;
+    std::cout << "\n\n\n";
 }
 
 /**
  * méthode principale de l'exercice 3
  */
-void exercice3(){
+void exercice3(int nbEtudiants){
+    std::cout << "################\n" <<"#  Exercice 3  #\n" << "################\n\n";
 
+    Etudiant *etudiants = new Etudiant[nbEtudiants];
+
+    std::cout << "saisie des étudiants  : \n\n";
+
+    for(int i = 0; i < nbEtudiants; i++){
+        std::cout << "Etudiant "<< i+1 <<" : \n\n";
+        etudiants[i].saisieEtudiant();
+        etudiants[i].calculMoyGenEtudiant();
+    }
+
+    std::cout << "Liste des étudiants  : \n\n";
+
+    for(int i = 0; i < nbEtudiants; i++) {
+        etudiants[i].afficherEtudiant();
+    }
+
+    std::cout << "Moyenne de la classe : " << calculerMoyenneClasse(etudiants, nbEtudiants);
+
+    delete []etudiants;
+    std::cout << "\n\n\n";
 }
 
+/**
+ * calcule la moyenne des moyenne générales des etudiants
+ * @param etudiants
+ *      le tableau d'étudiants
+ * @return
+ *      la moyenne
+ */
+float calculerMoyenneClasse(Etudiant etudiants[], int nbEtudiants){
+    float moyenne = 0.0;
+
+    for (int i = 0; i < sizeof(etudiants); ++i) {
+        moyenne += etudiants[i].moyGenerale;
+    }
+
+    return moyenne /= nbEtudiants;
+}
