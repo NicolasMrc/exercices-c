@@ -2,6 +2,7 @@
 // Created by Nicolas Mercier on 24/09/2016.
 //
 
+#include <cmath>
 #include "fonctions.h"
 
 
@@ -47,4 +48,28 @@ float calculerMoyenneClasse(Etudiant etudiants[], int nbEtudiants){
 void f(test *t){
     t->n = 0;
     t->x = 0.0;
+}
+
+/**
+ * methode calculant x a la puissance p
+ * @param x
+ *      le nombre a mettre a la puissance p
+ * @param p
+ *      la puissance
+ * @return
+ *      le resultat
+ */
+float expo(float x, unsigned p){
+    return (float)pow(x,p);
+}
+
+/**
+ * methode calculant x a la puissance p
+ * @param x
+ *      pointeur sur x
+ * @param p
+ *      la puissance
+ */
+void expo2(float *x, unsigned p){
+    *x = (float)pow(*x,p);
 }

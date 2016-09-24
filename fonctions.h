@@ -15,5 +15,9 @@ int somme(int tab[], int taille);
 
 void f(test *t);
 
+float expo(float x, unsigned p);
+
+void expo2(float *x, unsigned p);
+
 
 #endif //EXERCICES_FONCTIONS_H

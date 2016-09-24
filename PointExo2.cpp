@@ -2,7 +2,7 @@
 // Created by Nicolas Mercier on 23/09/2016.
 //
 
-#include "Point.h"
+#include "PointExo2.h"
 
 /**
  * Le numéro du point

@@ -1,8 +1,9 @@
 #include <iostream>
-#include "Point.h"
+#include "PointExo2.h"
 #include "Etudiant.h"
 #include "fonctions.h"
 #include "test.h"
+#include "PointExo6.h"
 
 
 //TEACHING.GAALOUL@GMAIL.COM
@@ -12,6 +13,10 @@ void exercice1(int taille);
 void exercice2(int taille);
 void exercice3(int nbEtudiants);
 void exercice4();
+void exercice5();
+void exercice6();
+void exercice7();
+void exercice8();
 int somme(int tab[], int taille);
 float calculerMoyenneClasse(Etudiant etudiants[], int nbEtudiants);
 
@@ -41,6 +46,18 @@ int main() {
                     break;
                 case 4 :
                     exercice4();
+                    break;
+                case 5 :
+                    exercice5();
+                    break;
+                case 6 :
+                    exercice6();
+                    break;
+                case 7 :
+                    exercice7();
+                    break;
+                case 8 :
+                    exercice8();
                     break;
                 default:
                     break;
@@ -118,7 +135,7 @@ void exercice3(int nbEtudiants){
  * fonction principale de l'exercie 4
  */
 void exercice4(){
-    std::cout << "################\n" <<"#  Exercice 4  #\n" << "################\n\n";
+    std::cout << "\n################\n" <<"#  Exercice 4  #\n" << "################\n\n";
     struct test t(3, 4.5);
     std::cout << "n : " << t.n << "\n";
     std::cout << "x : " << t.x << "\n\n";
@@ -126,4 +143,76 @@ void exercice4(){
     std::cout << "Reinitialisation ! " << "\n\n";
     std::cout << "n : " << t.n << "\n";
     std::cout << "x : " << t.x << "\n\n";
+}
+
+/**
+ * fonction principale de l'exercice 5
+ * partie 1 calculant le resulat de x puissance p
+ * partie 2 modifie x par reference pour contenir le resultat de x puissance p
+ */
+void exercice5(){
+    std::cout << "\n################\n" <<"#  Exercice 5  #\n" << "#   Partie 1   #\n" << "################\n\n";
+    float x;
+    unsigned p;
+    std::cout << "Valeur de x ? \n";
+    std::cin >> x;
+    std::cout << "\nValeur de la puissance ? \n";
+    std::cin >> p;
+    std::cout << "\nResultat : \n" << x << "^" << p << " = " << expo(x, p) << "\n" ;
+    std::cout << "\n################\n" <<"#  Exercice 5  #\n" << "#   Partie 2   #\n" << "################\n\n";
+
+
+    std::cout << "Valeur de x ? \n";
+    std::cin >> x;
+    std::cout << "\nValeur de la puissance ? \n";
+    std::cin >> p;
+    expo2(&x,p);
+    std::cout << "\nResultat : \n" << x << "\n" ;
+}
+
+void exercice6(){
+    std::cout << "\n################\n" <<"#  Exercice 6  #\n" << "################\n\n";
+
+    PointExo6 p1, p2;
+    int x, y;
+    std::cout << "/////// Initialisation \\\\\\\\\\\\\\ \n\n" << "p1 : \nQuelle est la coordonée x de p1 ?\n";
+    std::cin >> x;
+    std::cout << "Quelle est la coordonnée y de p1 ?\n";
+    std::cin >> y;
+    p1.initialise(x,y);
+    std::cout << "\np2 : \nQuelle est la coordonnée x de p2 ?\n";
+    std::cin >> x;
+    std::cout << "Quelle est la coordonnée y de p2 ?\n";
+    std::cin >> y;
+    p2.initialise(x,y);
+
+    std::cout << "\n\nAffichage : \n\n";
+    std::cout << "p1 : \n";
+    p1.affiche();
+    std::cout << "\np2 : \n";
+    p2.affiche();
+
+    std::cout << "\n\n////// Deplacement \\\\\\\\\\\\\\ \n\n";
+    std::cout << "p1 : \nDe combien voulez vous deplacer p1 en x ?\n";
+    std::cin >> x;
+    std::cout << "De combien voulez vous deplacer p1 en y ?\n";
+    std::cin >> y;
+    p1.deplace(x,y);
+    std::cout << "\np2 : \nDe combien voulez vous deplacer p2 en x ?\n";
+    std::cin >> x;
+    std::cout << "De combien voulez vous deplacer p2 en y ?\n";
+    std::cin >> y;
+    p2.deplace(x,y);
+
+    std::cout << "\nAffichage : \n\n";
+    p1.affiche();
+    p2.affiche();
+}
+
+void exercice7(){
+    std::cout << "\n################\n" <<"#  Exercice 7  #\n" << "################\n\n";
+}
+
+void exercice8(){
+    std::cout << "\n################\n" <<"#  Exercice 8  #\n" << "################\n\n";
 }
