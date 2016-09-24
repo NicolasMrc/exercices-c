@@ -73,3 +73,44 @@ float expo(float x, unsigned p){
 void expo2(float *x, unsigned p){
     *x = (float)pow(*x,p);
 }
+
+/**
+ * methode calculant le produit de deux entier signés
+ * @param x
+ *      le premier entier
+ * @param y
+ *      le duexieme entier
+ * @return
+ *      le produit des deux entiers
+ */
+signed produit(signed x, signed y){
+    return x*y;
+}
+
+/**
+ * methode calculant le produit de deux vecteur bidimensionnel
+ * @param v1
+ *      le premier vecteur
+ * @param v2
+ *      le deuxieme vecteur
+ * @return
+ *      le produit des deux vecteurs
+ */
+VecteurBidimensionel produit(VecteurBidimensionel v1, VecteurBidimensionel v2){
+    VecteurBidimensionel p(v1.getX()*v2.getX(), v1.getY()*v2.getY());
+    return p;
+}
+
+/**
+ * methode calculant le produit de deux vecteur tridimensionnel
+ * @param v1
+ *      le premier vecteur
+ * @param v2
+ *      le deuxieme vecteur
+ * @return
+ *      le produit des vecteurs
+ */
+VecteurTridimensionel produit(VecteurTridimensionel v1, VecteurTridimensionel v2){
+    VecteurTridimensionel p(v1.getX()*v2.getX(),v1.getY()*v2.getY(),v1.getZ()*v2.getZ());
+    return p;
+}

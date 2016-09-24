@@ -210,7 +210,64 @@ void exercice6(){
 }
 
 void exercice7(){
+    signed x1, x2, y1, y2, z1, z2;
     std::cout << "\n################\n" <<"#  Exercice 7  #\n" << "################\n\n";
+
+    std::cout << "/////// Produit de deux entier signés \\\\\\\\\\\\\\ \n\n";
+    std::cout << "x1 ?\n";
+    std::cin >> x1;
+    std::cout << "x2 ?\n";
+    std::cin >> x2;
+    std::cout << "\nResultat : " << produit(x1, x2) << "\n\n";
+
+
+    std::cout << "/////// Produit de deux vecteurs bidimensionnels \\\\\\\\\\\\\\ \n\n";
+    std::cout << "Vecteur 1 : \nx1 ?\n";
+    std::cin >> x1;
+    std::cout << "y1 ?\n";
+    std::cin >> y1;
+    std::cout << "\nVecteur 2 :\n";
+    std::cout << "x2 ?\n";
+    std::cin >> x2;
+    std::cout << "y2 ?\n";
+    std::cin >> y2;
+
+    VecteurBidimensionel vb1(x1,y1);
+    VecteurBidimensionel vb2(x2,y2);
+    VecteurBidimensionel pb = produit(vb1, vb2);
+    std::cout << "\nVecteur 1 :\n";
+    vb1.afficher();
+    std::cout << "\n\nVecteur 2 :\n";
+    vb2.afficher();
+    std::cout << "\n\nProduit des deux vecteurs :\n";
+    pb.afficher();
+
+
+    std::cout << "\n\n/////// Produit de deux vecteurs tridimensionnels \\\\\\\\\\\\\\ ";
+    std::cout << "\n\nVecteur 1 : \nx1 ?\n";
+    std::cin >> x1;
+    std::cout << "y1 ?\n";
+    std::cin >> y1;
+    std::cout << "z1 ?\n";
+    std::cin >> z1;
+    std::cout << "\nVecteur 2 :\n";
+    std::cout << "x2 ?\n";
+    std::cin >> x2;
+    std::cout << "y2 ?\n";
+    std::cin >> y2;
+    std::cout << "z2 ?\n";
+    std::cin >> z2;
+
+    VecteurTridimensionel vt1(x1,y1, z1);
+    VecteurTridimensionel vt2(x2,y2, z2);
+    VecteurTridimensionel pt = produit(vt1, vt2);
+    std::cout << "\nVecteur 1 :\n";
+    vt1.afficher();
+    std::cout << "\n\nVecteur 2 :\n";
+    vt2.afficher();
+    std::cout << "\n\nProduit des deux vecteurs :\n";
+    pt.afficher();
+
 }
 
 void exercice8(){

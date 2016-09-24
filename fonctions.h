@@ -8,6 +8,8 @@
 
 #include "Etudiant.h"
 #include "test.h"
+#include "VecteurTridimensionel.h"
+#include "VecteurBidimensionel.h"
 
 float calculerMoyenneClasse(Etudiant etudiants[], int nbEtudiants);
 
@@ -19,5 +21,10 @@ float expo(float x, unsigned p);
 
 void expo2(float *x, unsigned p);
 
+signed produit(signed x, signed y);
+
+VecteurBidimensionel produit(VecteurBidimensionel v1, VecteurBidimensionel v2);
+
+VecteurTridimensionel produit(VecteurTridimensionel v1, VecteurTridimensionel v2);
 
 #endif //EXERCICES_FONCTIONS_H
