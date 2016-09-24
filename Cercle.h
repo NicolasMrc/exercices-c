@@ -7,9 +7,14 @@
 
 #include <math.h>
 
+/**
+ * classe cercle
+ */
 class Cercle {
+
     friend double air(Cercle cercle);
     friend double perimetre(Cercle cercle);
+
     private:
         double PI = M_PI;
         float rayon, abscisse, ordonnee;

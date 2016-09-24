@@ -7,7 +7,7 @@
 
 
 /**
- * structure de l'exercice 4
+ * structure test de l'exercice 4
  */
 struct test {
     public:

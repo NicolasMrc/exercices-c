@@ -7,7 +7,9 @@
 
 #include <iostream>
 
-
+/**
+ * classe etudiant
+ */
 class Etudiant {
 
     int numInscription;

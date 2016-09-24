@@ -6,6 +6,9 @@
 #define EXERCICES_VECTEURTRIDIMENSIONEL_H
 
 
+/**
+ * Classe de vecteur tridimensionnel
+ */
 class VecteurTridimensionel {
     private:
         signed x,y,z;

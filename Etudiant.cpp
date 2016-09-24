@@ -4,7 +4,9 @@
 
 #include "Etudiant.h"
 
-
+/**
+ * methode permettant d'afficher un etudiant
+ */
 void Etudiant::afficherEtudiant() {
     std::cout << "Etudiant n°"<< Etudiant::numInscription << " : " << Etudiant::nom << " " << Etudiant::prenom << " "  "\n";
     std::cout << "Moyenne Semestre 1 : " << Etudiant::moySemestre1 << "\n";
@@ -12,6 +14,9 @@ void Etudiant::afficherEtudiant() {
     std::cout << "Moyenne Générale : " << Etudiant::moyGenerale << "\n\n";
 }
 
+/**
+ * methode permettant de calculer la moyenne generale d'un etudiant
+ */
 void Etudiant::calculMoyGenEtudiant() {
     if (moySemestre1 != NULL && moySemestre2 != NULL){
         moyGenerale = (moySemestre1 + moySemestre2)/2;
@@ -20,6 +25,9 @@ void Etudiant::calculMoyGenEtudiant() {
     }
 }
 
+/**
+ * methode permettant la saisie d'un étudiant
+ */
 void Etudiant::saisieEtudiant() {
     std::cout << "Nom ?\n";
     std::cin >> Etudiant::nom;

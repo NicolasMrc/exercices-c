@@ -5,7 +5,9 @@
 #ifndef EXERCICES_POINTEXO6_H
 #define EXERCICES_POINTEXO6_H
 
-
+/**
+ * classe point de l'exercice 6
+ */
 class PointExo6 {
     private:
         int x;

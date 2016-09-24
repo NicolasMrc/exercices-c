@@ -9,7 +9,7 @@
 #include <iostream>
 
 /**
- * classe Point
+ * classe Point de l'exercice 2
  */
 class Point {
 

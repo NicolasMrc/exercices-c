@@ -172,6 +172,12 @@ void exercice5(){
     std::cout << "\nResultat : \n" << x << "\n" ;
 }
 
+/**
+ * methode principale de l'exercice 6
+ * initialisation de vecteur
+ * deplacement de vecteur
+ * affichage
+ */
 void exercice6(){
     std::cout << "\n################\n" <<"#  Exercice 6  #\n" << "################\n\n";
 
@@ -211,6 +217,13 @@ void exercice6(){
     p2.affiche();
 }
 
+/**
+ * methode principale de l'exercice 7
+ *
+ * produit d'entier
+ * produits de vecteur bidimensionnel
+ * produits de vecteur tridimensionnel
+ */
 void exercice7(){
     signed x1, x2, y1, y2, z1, z2;
     std::cout << "\n################\n" <<"#  Exercice 7  #\n" << "################\n\n";
@@ -272,6 +285,10 @@ void exercice7(){
 
 }
 
+/**
+ * methode principale de l'exercie 8
+ * calcule de l'air et de la surface d'un cercle
+ */
 void exercice8(){
     std::cout << "\n################\n" <<"#  Exercice 8  #\n" << "################\n\n";
 

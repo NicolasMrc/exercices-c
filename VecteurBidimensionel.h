@@ -6,6 +6,9 @@
 #define EXERCICES_VECTEURBIDIMENSIONEL_H
 
 
+/**
+ * Classe de vecteur bidimensionnel
+ */
 class VecteurBidimensionel {
     private:
         signed x,y;
