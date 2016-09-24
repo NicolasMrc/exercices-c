@@ -3,5 +3,5 @@ project(Exercices)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp Point.cpp Point.h Etudiant.cpp Etudiant.h)
+set(SOURCE_FILES main.cpp Point.cpp Point.h Etudiant.cpp Etudiant.h fonctions.cpp fonctions.h test.cpp test.h)
 add_executable(Exercices ${SOURCE_FILES})

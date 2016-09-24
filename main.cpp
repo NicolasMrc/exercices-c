@@ -1,6 +1,9 @@
 #include <iostream>
 #include "Point.h"
 #include "Etudiant.h"
+#include "fonctions.h"
+#include "test.h"
+
 
 //TEACHING.GAALOUL@GMAIL.COM
 //[C++-EFREI]SANSVOISIN_MERCIER
@@ -8,6 +11,7 @@
 void exercice1(int taille);
 void exercice2(int taille);
 void exercice3(int nbEtudiants);
+void exercice4();
 int somme(int tab[], int taille);
 float calculerMoyenneClasse(Etudiant etudiants[], int nbEtudiants);
 
@@ -17,9 +21,38 @@ float calculerMoyenneClasse(Etudiant etudiants[], int nbEtudiants);
  *      0 si tout c'est bien déroulé
  */
 int main() {
-    exercice1(10);
-    exercice2(4);
-    exercice3(10);
+
+    std::cout << "################\n" <<"#   Welcolme   #\n" << "################\n\n";
+    std::cout << "Quel exercice voulez vous executer ?\n";
+    int choix;
+    std::cin >> choix;
+
+    do{
+        if (choix > 0 && choix < 9){
+            switch (choix) {
+                case 1 :
+                    exercice1(10);
+                    break;
+                case 2 :
+                    exercice2(4);
+                    break;
+                case 3 :
+                    exercice3(10);
+                    break;
+                case 4 :
+                    exercice4();
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            std::cout << "valeur invalide !\n";
+            std::cout << "Quel exercice ?\n";
+            std::cin >> choix;
+        }
+    } while (choix == 0 || choix >= 9);
+
+
     return 0;
 }
 
@@ -37,22 +70,7 @@ void exercice1(int taille){
     std::cout << "somme : " << somme(tab, taille) << "\n\n\n";
 }
 
-/**
- * fonction calculant la somme des entiers d'un tableau
- * @param tab
- *      le tableau
- * @return
- *      la somme
- */
-int somme(int tab[], int taille){
-    int somme = 0;
 
-    for (int i = 0; i < taille; i++){
-        somme += tab[i];
-    }
-
-    return somme;
-}
 
 /**
  * méthode principale de l'exercice 2
@@ -97,18 +115,15 @@ void exercice3(int nbEtudiants){
 }
 
 /**
- * calcule la moyenne des moyenne générales des etudiants
- * @param etudiants
- *      le tableau d'étudiants
- * @return
- *      la moyenne
+ * fonction principale de l'exercie 4
  */
-float calculerMoyenneClasse(Etudiant etudiants[], int nbEtudiants){
-    float moyenne = 0.0;
-
-    for (int i = 0; i < sizeof(etudiants); ++i) {
-        moyenne += etudiants[i].moyGenerale;
-    }
-
-    return moyenne /= nbEtudiants;
+void exercice4(){
+    std::cout << "################\n" <<"#  Exercice 4  #\n" << "################\n\n";
+    struct test t(3, 4.5);
+    std::cout << "n : " << t.n << "\n";
+    std::cout << "x : " << t.x << "\n\n";
+    f(&t);
+    std::cout << "Reinitialisation ! " << "\n\n";
+    std::cout << "n : " << t.n << "\n";
+    std::cout << "x : " << t.x << "\n\n";
 }
