@@ -9,13 +9,15 @@
       <sourceFolder url="file://$MODULE_DIR$/VecteurTridimensionel.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/PointExo2.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/PointExo6.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/VecteurBidimensionel.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Cercle.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/fonctions.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/VecteurTridimensionel.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/PointExo2.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Etudiant.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Cercle.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/VecteurBidimensionel.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/VecteurBidimensionel.h" isTestSource="false" />
     </content>

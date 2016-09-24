@@ -5,11 +5,12 @@
 #ifndef EXERCICES_FONCTIONS_H
 #define EXERCICES_FONCTIONS_H
 
-
 #include "Etudiant.h"
 #include "test.h"
 #include "VecteurTridimensionel.h"
 #include "VecteurBidimensionel.h"
+#include "Cercle.h"
+
 
 float calculerMoyenneClasse(Etudiant etudiants[], int nbEtudiants);
 
@@ -26,5 +27,9 @@ signed produit(signed x, signed y);
 VecteurBidimensionel produit(VecteurBidimensionel v1, VecteurBidimensionel v2);
 
 VecteurTridimensionel produit(VecteurTridimensionel v1, VecteurTridimensionel v2);
+
+double perimetre(Cercle cercle);
+
+double air(Cercle cercle);
 
 #endif //EXERCICES_FONCTIONS_H

@@ -4,6 +4,7 @@
 
 #include <cmath>
 #include "fonctions.h"
+#include "Cercle.h"
 
 
 /**
@@ -113,4 +114,26 @@ VecteurBidimensionel produit(VecteurBidimensionel v1, VecteurBidimensionel v2){
 VecteurTridimensionel produit(VecteurTridimensionel v1, VecteurTridimensionel v2){
     VecteurTridimensionel p(v1.getX()*v2.getX(),v1.getY()*v2.getY(),v1.getZ()*v2.getZ());
     return p;
+}
+
+/**
+ * methode permettant de calculer le permietre d'un cerlce
+ * @param cercle
+ *      le cercle
+ * @return
+ *      le perimetre
+ */
+double air(Cercle cercle){
+    return (2 * cercle.PI * cercle.rayon);
+}
+
+/**
+ * methode permettant de calculer la surface d'un cerlce
+ * @param cercle
+ *      le cercle
+ * @return
+ *      la surface
+ */
+double perimetre(Cercle cercle){
+    return (cercle.PI * pow(cercle.rayon,2));
 }

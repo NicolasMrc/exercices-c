@@ -1,9 +1,11 @@
 #include <iostream>
+#include <math.h>
 #include "PointExo2.h"
 #include "Etudiant.h"
 #include "fonctions.h"
 #include "test.h"
 #include "PointExo6.h"
+#include "Cercle.h"
 
 
 //TEACHING.GAALOUL@GMAIL.COM
@@ -272,4 +274,18 @@ void exercice7(){
 
 void exercice8(){
     std::cout << "\n################\n" <<"#  Exercice 8  #\n" << "################\n\n";
+
+    float r, a, o;
+    std::cout << "Rayon du cercle ? \n";
+    std::cin >> r;
+    std::cout << "\nAbsicce du cercle ? \n";
+    std::cin >> a;
+    std::cout << "\nOrdonnée du cercle ? \n";
+    std::cin >> o;
+    Cercle cercle(r,a,o);
+
+    std::cout << "\nPerimetre du cercle : " << perimetre(cercle) << "\n\n";
+    std::cout << "Air du cercle : " << air(cercle) << "\n\n";
 }
+
+
